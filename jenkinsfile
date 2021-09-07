@@ -4,8 +4,14 @@ agent any
 stages
 {
 
-Stage('scm checkout')
+stage('scm checkout')
 {steps {git branch: 'master', url: 'https://github.com/awsautikapil/maven-project.git'}}
+
+stage ('build the code')
+{
+stage{  withMaven(jdk: 'JAVA_HOME', maven: 'MAVEN_HOME') {
+   {sh 'mvn package' }
+ }}
 
 }
 
