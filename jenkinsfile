@@ -9,7 +9,7 @@ stage('scm checkout')
 
 stage ('build the code')
 {
-stage{  withMaven(jdk: 'JAVA_HOME', maven: 'MAVEN_HOME') }
+steps {  withMaven(jdk: 'JAVA_HOME', maven: 'MAVEN_HOME') }
    {sh 'mvn package' }
  }
 
