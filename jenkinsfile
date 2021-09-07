@@ -4,7 +4,7 @@ agent any
 stages
 {
 
-Stage('scm checkout')
+stage('scm checkout')
 {steps {git branch: 'master', url: 'https://github.com/awsautikapil/maven-project.git'}}
 
 }
